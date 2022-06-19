@@ -1,0 +1,105 @@
+/* Reset */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Custom Properties */
+:root {
+  --clr-veryDarkMagenta: hsl(300, 43%, 22%);
+  --clr-softPink: hsl(333, 80%, 67%);
+
+  --clr-darkGrayishMagenta: hsl(303, 10%, 53%);
+  --clr-lightGrayishMagenta: hsl(300, 24%, 96%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+
+/* Layout */
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bgTop {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 150%;
+}
+
+.bgBottom {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+section {
+  max-width: 1250px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.reviews {
+  grid-column: 1/3;
+}
+
+
+/* Typography */
+section {
+  font-size: 15px;
+  font-family: 'League Spartan', sans-serif;
+  color: var(--clr-veryDarkMagenta);
+  font-weight: 500;
+}
+
+.intro h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.intro p {
+  color: var(--clr-darkGrayishMagenta);
+  font-weight: 400;
+}
+
+.review-customer, 
+.review-statement {
+  color: var(--clr-lightGrayishMagenta);
+}
+
+.review-verification {
+  color: var(--clr-softPink);
+}
+
+
+/* Styling Components */
+.ratings {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.rating-container {
+  background: var(--clr-lightGrayishMagenta);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 360px;
+  justify-content: space-between;
+}
